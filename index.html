@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album Organizer</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Local library</p>
+        <h1>Photo Album Organizer</h1>
+      </div>
+      <p class="privacy-note">Photos stay on this device. SQLite stores metadata only.</p>
+    </header>
+
+    <main id="app" class="app-shell" aria-live="polite">
+      <section class="panel" aria-labelledby="create-album-title">
+        <h2 id="create-album-title">Create album</h2>
+        <form id="album-form" class="album-form">
+          <label>
+            Album name
+            <input id="album-name" name="name" type="text" required maxlength="120" autocomplete="off">
+          </label>
+          <label>
+            Album date
+            <input id="album-date" name="albumDate" type="date">
+          </label>
+          <button type="submit">Create album</button>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="albums-title">
+        <div class="section-heading">
+          <h2 id="albums-title">Albums by date</h2>
+          <button id="refresh-albums" type="button">Refresh</button>
+        </div>
+        <div id="message" class="message" role="status"></div>
+        <div id="album-groups" class="album-groups"></div>
+      </section>
+
+      <section id="album-view" class="panel album-view" aria-labelledby="album-view-title" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Album</p>
+            <h2 id="album-view-title">Photos</h2>
+          </div>
+          <button id="close-album" type="button">Back to albums</button>
+        </div>
+        <div id="photo-grid" class="photo-grid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

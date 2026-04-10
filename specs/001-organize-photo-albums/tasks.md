@@ -17,12 +17,12 @@
 
 **Purpose**: Initialize the local-first Vite application, minimal dependency set, and repository structure.
 
-- [ ] T001 Create Vite/Node project metadata, scripts, and minimal dependencies in package.json
-- [ ] T002 Create application entry files in index.html and src/styles.css
-- [ ] T003 [P] Create frontend module placeholders in src/main.js, src/albums.js, src/drag-reorder.js, src/photo-tiles.js, src/local-client.js, and src/accessibility.js
-- [ ] T004 [P] Create local service module placeholders in server/app.js, server/db.js, server/migrations.js, server/albums-repository.js, server/photos-repository.js, and server/local-files.js
-- [ ] T005 [P] Create test harness files in tests/unit/test-db.js, tests/e2e/fixtures.js, and playwright.config.js
-- [ ] T006 Configure ignored local runtime artifacts in .gitignore for node_modules/ and data/photo-albums.sqlite
+- [x] T001 Create Vite/Node project metadata, scripts, and minimal dependencies in package.json
+- [x] T002 Create application entry files in index.html and src/styles.css
+- [x] T003 [P] Create frontend module placeholders in src/main.js, src/albums.js, src/drag-reorder.js, src/photo-tiles.js, src/local-client.js, and src/accessibility.js
+- [x] T004 [P] Create local service module placeholders in server/app.js, server/db.js, server/migrations.js, server/albums-repository.js, server/photos-repository.js, and server/local-files.js
+- [x] T005 [P] Create test harness files in tests/unit/test-db.js, tests/e2e/fixtures.js, and playwright.config.js
+- [x] T006 Configure ignored local runtime artifacts in .gitignore for node_modules/ and data/photo-albums.sqlite
 
 ---
 
@@ -32,16 +32,16 @@
 
 **Critical**: No user story work can begin until this phase is complete.
 
-- [ ] T007 Implement local app shell markup and root containers in index.html
-- [ ] T008 Configure npm scripts for dev, unit tests, e2e tests, and local service startup in package.json
-- [ ] T009 Implement SQLite connection, data directory bootstrap, and database lifecycle helpers in server/db.js
-- [ ] T010 Implement SQLite migrations for albums, photos, date group order indexes, and metadata-only storage in server/migrations.js
-- [ ] T011 Implement album validation helpers for flat albums, known/unknown dates, and same-group ordering in server/albums-repository.js
-- [ ] T012 Implement local HTTP service bootstrap, JSON parsing, static app serving, and error response helpers in server/app.js
-- [ ] T013 [P] Implement frontend local service request wrapper and error normalization in src/local-client.js
-- [ ] T014 [P] Implement isolated SQLite test database helpers in tests/unit/test-db.js
-- [ ] T015 [P] Implement Playwright seeded fixture helpers for albums and photos in tests/e2e/fixtures.js
-- [ ] T016 Implement base responsive layout, empty-state, focus, and stable list styling in src/styles.css
+- [x] T007 Implement local app shell markup and root containers in index.html
+- [x] T008 Configure npm scripts for dev, unit tests, e2e tests, and local service startup in package.json
+- [x] T009 Implement SQLite connection, data directory bootstrap, and database lifecycle helpers in server/db.js
+- [x] T010 Implement SQLite migrations for albums, photos, date group order indexes, and metadata-only storage in server/migrations.js
+- [x] T011 Implement album validation helpers for flat albums, known/unknown dates, and same-group ordering in server/albums-repository.js
+- [x] T012 Implement local HTTP service bootstrap, JSON parsing, static app serving, and error response helpers in server/app.js
+- [x] T013 [P] Implement frontend local service request wrapper and error normalization in src/local-client.js
+- [x] T014 [P] Implement isolated SQLite test database helpers in tests/unit/test-db.js
+- [x] T015 [P] Implement Playwright seeded fixture helpers for albums and photos in tests/e2e/fixtures.js
+- [x] T016 Implement base responsive layout, empty-state, focus, and stable list styling in src/styles.css
 
 **Checkpoint**: Foundation ready; user story implementation can begin.
 
@@ -55,17 +55,17 @@
 
 ### Tests for User Story 1
 
-- [ ] T017 [P] [US1] Add unit tests for date group derivation, `Undated` fallback, and no nested album representation in tests/unit/album-validation.test.js
-- [ ] T018 [P] [US1] Add e2e tests for main page date grouping, same-date grouping, distinguishable album summaries, and no-albums empty state in tests/e2e/date-grouping.spec.js
+- [x] T017 [P] [US1] Add unit tests for date group derivation, `Undated` fallback, and no nested album representation in tests/unit/album-validation.test.js
+- [x] T018 [P] [US1] Add e2e tests for main page date grouping, same-date grouping, distinguishable album summaries, and no-albums empty state in tests/e2e/date-grouping.spec.js
 
 ### Implementation for User Story 1
 
-- [ ] T019 [US1] Implement album creation and grouped album listing queries in server/albums-repository.js
-- [ ] T020 [US1] Implement `CreateAlbum` and `ListAlbumsByDate` local service routes in server/app.js
-- [ ] T021 [US1] Implement date group and album summary rendering in src/albums.js
-- [ ] T022 [US1] Wire main page initialization, loading, error, and no-albums empty states in src/main.js
-- [ ] T023 [US1] Add date group, album summary, `Undated`, and empty-state visual styles in src/styles.css
-- [ ] T024 [US1] Add focus order and screen-reader labels for date groups and album summaries in src/accessibility.js
+- [x] T019 [US1] Implement album creation and grouped album listing queries in server/albums-repository.js
+- [x] T020 [US1] Implement `CreateAlbum` and `ListAlbumsByDate` local service routes in server/app.js
+- [x] T021 [US1] Implement date group and album summary rendering in src/albums.js
+- [x] T022 [US1] Wire main page initialization, loading, error, and no-albums empty states in src/main.js
+- [x] T023 [US1] Add date group, album summary, `Undated`, and empty-state visual styles in src/styles.css
+- [x] T024 [US1] Add focus order and screen-reader labels for date groups and album summaries in src/accessibility.js
 
 **Checkpoint**: User Story 1 is fully functional and testable independently.
 
@@ -79,17 +79,17 @@
 
 ### Tests for User Story 2
 
-- [ ] T025 [P] [US2] Add unit tests for same-date-group order updates, invalid cross-group moves, invalid nesting, and duplicate prevention in tests/unit/album-order.test.js
-- [ ] T026 [P] [US2] Add e2e tests for drag reorder, persisted order after return, invalid drop rollback, and no duplicate album entry in tests/e2e/drag-reorder.spec.js
+- [x] T025 [P] [US2] Add unit tests for same-date-group order updates, invalid cross-group moves, invalid nesting, and duplicate prevention in tests/unit/album-order.test.js
+- [x] T026 [P] [US2] Add e2e tests for drag reorder, persisted order after return, invalid drop rollback, and no duplicate album entry in tests/e2e/drag-reorder.spec.js
 
 ### Implementation for User Story 2
 
-- [ ] T027 [US2] Implement transactional same-date-group reorder persistence and validation in server/albums-repository.js
-- [ ] T028 [US2] Implement `ReorderAlbum` local service route and error responses in server/app.js
-- [ ] T029 [US2] Implement drag state, valid drop positions, invalid drop rollback, and same-group constraints in src/drag-reorder.js
-- [ ] T030 [US2] Wire reorder controls and saved order refresh into album list rendering in src/albums.js
-- [ ] T031 [US2] Implement keyboard-accessible non-pointer reorder controls in src/accessibility.js
-- [ ] T032 [US2] Add drag target, invalid drop, saved order, and keyboard reorder styles in src/styles.css
+- [x] T027 [US2] Implement transactional same-date-group reorder persistence and validation in server/albums-repository.js
+- [x] T028 [US2] Implement `ReorderAlbum` local service route and error responses in server/app.js
+- [x] T029 [US2] Implement drag state, valid drop positions, invalid drop rollback, and same-group constraints in src/drag-reorder.js
+- [x] T030 [US2] Wire reorder controls and saved order refresh into album list rendering in src/albums.js
+- [x] T031 [US2] Implement keyboard-accessible non-pointer reorder controls in src/accessibility.js
+- [x] T032 [US2] Add drag target, invalid drop, saved order, and keyboard reorder styles in src/styles.css
 
 **Checkpoint**: User Stories 1 and 2 are independently functional and reordering persists.
 
@@ -103,17 +103,17 @@
 
 ### Tests for User Story 3
 
-- [ ] T033 [P] [US3] Add unit tests for photo metadata ordering, local-only source validation, and preview status transitions in tests/unit/photo-preview.test.js
-- [ ] T034 [P] [US3] Add e2e tests for album tile previews, first 100 photo scannability, empty album state, and missing preview placeholders in tests/e2e/album-tiles.spec.js
+- [x] T033 [P] [US3] Add unit tests for photo metadata ordering, local-only source validation, and preview status transitions in tests/unit/photo-preview.test.js
+- [x] T034 [P] [US3] Add e2e tests for album tile previews, first 100 photo scannability, empty album state, and missing preview placeholders in tests/e2e/album-tiles.spec.js
 
 ### Implementation for User Story 3
 
-- [ ] T035 [US3] Implement ordered photo metadata queries and preview status updates in server/photos-repository.js
-- [ ] T036 [US3] Implement safe local preview file checks and local-only preview reads in server/local-files.js
-- [ ] T037 [US3] Implement `GetAlbumPhotos` and `ReadPhotoPreview` local service routes in server/app.js
-- [ ] T038 [US3] Implement album open/close navigation and album view state in src/main.js
-- [ ] T039 [US3] Implement stable photo tile rendering, missing preview placeholders, and no-photos empty state in src/photo-tiles.js
-- [ ] T040 [US3] Add responsive tile grid, fixed tile aspect ratio, loading, and placeholder styles in src/styles.css
+- [x] T035 [US3] Implement ordered photo metadata queries and preview status updates in server/photos-repository.js
+- [x] T036 [US3] Implement safe local preview file checks and local-only preview reads in server/local-files.js
+- [x] T037 [US3] Implement `GetAlbumPhotos` and `ReadPhotoPreview` local service routes in server/app.js
+- [x] T038 [US3] Implement album open/close navigation and album view state in src/main.js
+- [x] T039 [US3] Implement stable photo tile rendering, missing preview placeholders, and no-photos empty state in src/photo-tiles.js
+- [x] T040 [US3] Add responsive tile grid, fixed tile aspect ratio, loading, and placeholder styles in src/styles.css
 
 **Checkpoint**: All user stories are independently functional.
 
@@ -123,12 +123,12 @@
 
 **Purpose**: Validate privacy, performance, documentation, and end-to-end readiness across all user stories.
 
-- [ ] T041 [P] Add privacy guard tests for rejecting remote image sources and preserving metadata-only storage in tests/unit/privacy-boundary.test.js
-- [ ] T042 [P] Add browser performance budget tests for 50 albums and 100 photo tiles in tests/e2e/performance-budget.spec.js
-- [ ] T043 Harden local service privacy and no-upload guarantees across server/app.js and server/local-files.js
-- [ ] T044 Update final setup, test, and privacy validation notes in specs/001-organize-photo-albums/quickstart.md
-- [ ] T045 Create user-facing project usage notes for local setup and photo privacy in README.md
-- [ ] T046 Run npm test and npm run test:e2e, then record final validation notes in specs/001-organize-photo-albums/quickstart.md
+- [x] T041 [P] Add privacy guard tests for rejecting remote image sources and preserving metadata-only storage in tests/unit/privacy-boundary.test.js
+- [x] T042 [P] Add browser performance budget tests for 50 albums and 100 photo tiles in tests/e2e/performance-budget.spec.js
+- [x] T043 Harden local service privacy and no-upload guarantees across server/app.js and server/local-files.js
+- [x] T044 Update final setup, test, and privacy validation notes in specs/001-organize-photo-albums/quickstart.md
+- [x] T045 Create user-facing project usage notes for local setup and photo privacy in README.md
+- [x] T046 Run npm test and npm run test:e2e, then record final validation notes in specs/001-organize-photo-albums/quickstart.md
 
 ---
 

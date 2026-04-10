@@ -39,8 +39,14 @@ npm test
 npm run test:e2e
 ```
 
+Validation completed on 2026-04-10:
+
+- `npm test`: passed 10 unit tests for album validation, album ordering, photo previews, and privacy boundaries.
+- `npm run test:e2e`: passed 7 Playwright tests for date grouping, empty states, keyboard reorder, invalid reorder handling, photo tiles, missing previews, and the 50-album/100-tile performance budget.
+
 ## Privacy Check
 
 - Confirm original photo files remain in their source folders.
 - Confirm the local SQLite database stores metadata only.
 - Confirm the app does not require a remote account or remote upload destination.
+- Confirm remote photo sources are rejected by unit tests and local service validation.

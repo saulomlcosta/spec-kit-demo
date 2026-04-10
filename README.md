@@ -59,12 +59,38 @@ producao.
 
 ## Status
 
-Este repositorio esta na fase de documentacao e planejamento. A implementacao
-da aplicacao ainda deve seguir as tarefas descritas em:
+Este repositorio contem os artefatos do Spec Kit e uma implementacao local de
+referencia para a feature de organizador de albuns de fotos. As tarefas de
+implementacao estao rastreadas em:
 
 ```text
 specs/001-organize-photo-albums/tasks.md
 ```
+
+## Como Rodar
+
+Instale as dependencias e inicie o app local:
+
+```powershell
+npm install
+npm run dev
+```
+
+Depois abra a URL local exibida pelo Vite/servidor Node.
+
+Para validar:
+
+```powershell
+npm test
+npm run test:e2e
+```
+
+## Privacidade Local
+
+O demo foi planejado para manter fotos no dispositivo do usuario. O SQLite
+local armazena metadados, como albuns, ordem de exibicao e caminhos locais de
+arquivos. O app rejeita fontes remotas de fotos e nao implementa upload para
+servicos externos.
 
 ## Objetivo de Aprendizado
 

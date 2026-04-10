@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+*.log
+.env*
+data/photo-albums.sqlite
+data/*.sqlite
+test-results/
+playwright-report/
+tests/e2e/assets/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
